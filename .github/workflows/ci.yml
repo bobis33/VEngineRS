@@ -1,0 +1,55 @@
+name: 'CI - RustEngine'
+run-name: 'RustEngine - "${{ github.ref_name }}"'
+permissions:
+  contents: read
+on:
+  push:
+    branches:
+      - "main"
+
+  pull_request:
+    branches:
+      - "**"
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: ''
+    if: github.actor != 'dependabot[bot]'
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+
+          - os: ubuntu-24.04
+            shell: bash
+
+          - os: macos-15
+            shell: bash
+
+          - os: windows-2025
+            shell: powershell
+
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: ${{ matrix.shell }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.1
+        with:
+          ref: ${{ github.ref }}
+          repository: '${{ github.repository }}'
+          fetch-depth: 1
+          submodules: recursive
+
+      - name: Cache cargo
+        uses: Swatinem/rust-cache@v2.8.2
+
+      - name: Build
+        run: cargo build
+
+      - name: Run tests
+        run: cargo test
