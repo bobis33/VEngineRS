@@ -1,0 +1,60 @@
+name: 'CD - Deploy documentation'
+run-name: 'Deploy documentation - "${{ github.ref_name }}"'
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: 'Build documentation'
+    if: github.actor != 'dependabot[bot]'
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v6.0.1
+        with:
+          ref: ${{ github.ref }}
+          repository: '${{ github.repository }}'
+          fetch-depth: 1
+          submodules: recursive
+
+      - name: 'Cache cargo'
+        uses: Swatinem/rust-cache@v2.8.2
+
+      - name: 'Build documentation'
+        run: cargo doc --no-deps
+
+      - name: 'Prepare site folder'
+        run: |
+          mkdir -p ./_site
+          cp -r ./target/doc/* ./_site/
+
+      - name: 'Upload artifact for pages'
+        uses: actions/upload-pages-artifact@v4.0.0
+        with:
+          path: ./_site
+
+  deploy:
+    name: 'Deploy documentation to GitHub Pages'
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        shell: bash
+    needs: build
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: 'github-pages'
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+
+      - name: 'Deploy to GitHub Pages'
+        id: deployment
+        uses: actions/deploy-pages@v4
