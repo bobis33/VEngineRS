@@ -33,7 +33,7 @@ cargo test
 ### Documentation
 
 ```bash
-cargo doc
+cargo doc --open
 ```
 
 ### Format
@@ -48,9 +48,12 @@ cargo fmt
 cargo clippy
 ```
 
+## Security
+See the [security policy](https://github.com/bobis33/RustEngine/blob/main/SECURITY.md) for more information.
+
 ## Contributing
 
 Want to contribute? See [contributing guidelines](https://github.com/bobis33/RustEngine/blob/main/CONTRIBUTING.md).
 
 ## License
-This project is licensed under the MIT License. See the [license](https://github.com/bobis33/RustEngine/blob/main/) file for details
+This project is licensed under the MIT License. See the [license](https://github.com/bobis33/RustEngine/blob/main/LICENSE.md) file for details.
