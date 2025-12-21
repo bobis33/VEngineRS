@@ -1,4 +1,4 @@
-name: "Fullstack CodeQL config"
+name: "CodeQL config"
 
 queries:
   - uses: security-and-quality

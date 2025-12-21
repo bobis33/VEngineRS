@@ -1,3 +1,8 @@
+[![CI](https://github.com/bobis33/RustEngine/actions/workflows/ci.yml/badge.svg)](https://github.com/bobis33/RustEngine/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/bobis33/RustEngine/actions/workflows/codeql.yml/badge.svg)](https://github.com/bobis33/RustEngine/actions/workflows/codeql.yml)
+[![Doxygen deployment](https://github.com/bobis33/RustEngine/actions/workflows/deploy-documentation.yml/badge.svg)](https://github.com/bobis33/RustEngine/actions/workflows/deploy-documentation.yml)
+[![License](https://img.shields.io/github/license/bobis33/RustEngine.svg)](https://github.com/bobis33/RustEngine/blob/main/LICENSE.md)
+
 # RustEngine
 
 Vulkan Engine written in Rust.

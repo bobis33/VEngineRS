@@ -1,8 +1,6 @@
 //! # `rust_engine`
 //!
-//! Fournit des informations système cross-platform (Linux, macOS, Windows).
-//!
-//! ## Exemple
+//! ## Example
 //!
 //! ```
 //! use rust_engine::SystemInfo;

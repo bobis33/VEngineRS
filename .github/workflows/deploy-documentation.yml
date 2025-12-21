@@ -4,24 +4,18 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  deploy-docs:
     name: 'Build documentation'
     if: github.actor != 'dependabot[bot]'
     timeout-minutes: 15
-    permissions:
-      contents: read
     runs-on: ubuntu-24.04
-    defaults:
-      run:
-        shell: bash
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
       - name: 'Checkout repository'
-        uses: actions/checkout@v6.0.1
-        with:
-          ref: ${{ github.ref }}
-          repository: '${{ github.repository }}'
-          fetch-depth: 1
-          submodules: recursive
+        uses: actions/checkout@v6
 
       - name: 'Cache cargo'
         uses: Swatinem/rust-cache@v2.8.2
@@ -29,32 +23,10 @@ jobs:
       - name: 'Build documentation'
         run: cargo doc --no-deps
 
-      - name: 'Prepare site folder'
-        run: |
-          mkdir -p ./_site
-          cp -r ./target/doc/* ./_site/
-
-      - name: 'Upload artifact for pages'
-        uses: actions/upload-pages-artifact@v4.0.0
+      - name: 'Upload documentation to GitHub Pages'
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: ./_site
-
-  deploy:
-    name: 'Deploy documentation to GitHub Pages'
-    runs-on: ubuntu-24.04
-    defaults:
-      run:
-        shell: bash
-    needs: build
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    environment:
-      name: 'github-pages'
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
+          path: target/doc
 
       - name: 'Deploy to GitHub Pages'
-        id: deployment
         uses: actions/deploy-pages@v4
