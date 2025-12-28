@@ -1,6 +1,5 @@
-mod cpu;
 mod env;
-pub mod error;
+mod error;
 mod gpu;
 
 use crate::system_info::env::get_env_any;

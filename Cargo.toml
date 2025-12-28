@@ -17,6 +17,7 @@ publish = false
 [dependencies]
 ash = "0.38.0"
 ash-window = "0.13.0"
+clap = { version = "4.5.53", features = ["derive"] }
 glam = "0.30.9"
 raw-window-handle = "0.6.2"
 sysinfo = "0.37.2"
