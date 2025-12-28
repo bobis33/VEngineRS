@@ -1,15 +1,15 @@
 [package]
-name = "rust_engine"
+name = "vengine_rs"
 version = "0.0.1"
-description = "A simple rendering engine written in Rust, for learning purposes."
+description = "A Vulkan engine written in Rust, for learning purposes."
 edition = "2024"
-authors = ["bobis33"]
+authors = ["Masina Elliot <masina.elliot@hotmail.fr>"]
 readme = "README.md"
 license-file = "LICENSE.md"
-homepage = "https://github.com/bobis33/RustEngine#readme"
-repository = "https://github.com/bobis33/RustEngine"
-documentation = ""
-keywords = ["rendering", "engine", "graphics", "rust"]
+homepage = "https://github.com/bobis33/VEngineRS#readme"
+repository = "https://github.com/bobis33/VEngineRS"
+documentation = "https://bobis33.github.io/VEngineRS/vengine_rs/"
+keywords = ["rendering", "engine", "graphics", "rust", "vulkan"]
 exclude = [".gitignore", ".editorconfig", "target/*", "tests/*", ".github/*"]
 include = ["src/**", "Cargo.toml", "README.md", "LICENSE.md", "SECURITY.md"]
 publish = false

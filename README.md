@@ -1,9 +1,9 @@
-[![CI](https://github.com/bobis33/RustEngine/actions/workflows/ci.yml/badge.svg)](https://github.com/bobis33/RustEngine/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/bobis33/RustEngine/actions/workflows/codeql.yml/badge.svg)](https://github.com/bobis33/RustEngine/actions/workflows/codeql.yml)
-[![Doxygen deployment](https://github.com/bobis33/RustEngine/actions/workflows/deploy-documentation.yml/badge.svg)](https://github.com/bobis33/RustEngine/actions/workflows/deploy-documentation.yml)
-[![License](https://img.shields.io/github/license/bobis33/RustEngine.svg)](https://github.com/bobis33/RustEngine/blob/main/LICENSE.md)
+[![CI](https://github.com/bobis33/VEngineRS/actions/workflows/ci.yml/badge.svg)](https://github.com/bobis33/RustEngine/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/bobis33/VEngineRS/actions/workflows/codeql.yml/badge.svg)](https://github.com/bobis33/RustEngine/actions/workflows/codeql.yml)
+[![Doxygen deployment](https://github.com/bobis33/VEngineRS/actions/workflows/deploy-documentation.yml/badge.svg)](https://github.com/bobis33/RustEngine/actions/workflows/deploy-documentation.yml)
+[![License](https://img.shields.io/github/license/bobis33/VEngineRS.svg)](https://github.com/bobis33/RustEngine/blob/main/LICENSE.md)
 
-# RustEngine
+# VEngineRS
 
 Vulkan Engine written in Rust.
 
@@ -49,11 +49,11 @@ cargo clippy
 ```
 
 ## Security
-See the [security policy](https://github.com/bobis33/RustEngine/blob/main/SECURITY.md) for more information.
+See the [security policy](https://github.com/bobis33/VEngineRS/blob/main/SECURITY.md) for more information.
 
 ## Contributing
 
-Want to contribute? See [contributing guidelines](https://github.com/bobis33/RustEngine/blob/main/CONTRIBUTING.md).
+Want to contribute? See [contributing guidelines](https://github.com/bobis33/VEngineRS/blob/main/CONTRIBUTING.md).
 
 ## License
-This project is licensed under the MIT License. See the [license](https://github.com/bobis33/RustEngine/blob/main/LICENSE.md) file for details.
+This project is licensed under the MIT License. See the [license](https://github.com/bobis33/VEngineRS/blob/main/LICENSE.md) file for details.

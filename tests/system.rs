@@ -1,4 +1,4 @@
-use rust_engine::SystemInfo;
+use vengine_rs::SystemInfo;
 
 #[test]
 fn system_info_can_be_created() {

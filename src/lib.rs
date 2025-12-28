@@ -1,9 +1,9 @@
-//! # `rust_engine`
+//! # `vengine_rs`
 //!
 //! ## Example
 //!
 //! ```
-//! use rust_engine::SystemInfo;
+//! use vengine_rs::SystemInfo;
 //!
 //! let info = SystemInfo::new();
 //! println!("{}", info.os_arch);

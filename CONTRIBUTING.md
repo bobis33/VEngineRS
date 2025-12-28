@@ -49,7 +49,7 @@ This ensures consistency across branches and PRs, making it easy to identify the
 - Extension : `.md`
 
 ### Yaml
-- Extention : `.yml`
+- Extension : `.yml`
 
 ### Toml
 - Extension : `.toml`

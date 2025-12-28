@@ -1,6 +1,8 @@
+.git
+
 .idea
 .vscode
-.git
+
 target
 
 *.lock
