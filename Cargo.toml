@@ -17,9 +17,9 @@ publish = false
 [dependencies]
 ash = "0.38.0"
 ash-window = "0.13.0"
-glam = "0.30.9"
+glam = "0.31.0"
 raw-window-handle = "0.6.2"
-sysinfo = "0.37.2"
+sysinfo = "0.38.0"
 winit = "0.30.12"
 
 [lints.clippy]
